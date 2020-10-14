@@ -1,0 +1,4 @@
+<div [ngClass]="status?'on':'off'"> <!-- letterlijk staat hier in JavaScript voluit: if(status) {return 'on';} else {return 'off';} -->
+    <!-- computer is running: {{status}} -->
+    <button (click)="toggle()">ON/OFF</button>
+</div>

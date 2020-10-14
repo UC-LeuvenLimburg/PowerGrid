@@ -1,0 +1,14 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-image: url("../../assets/senseo.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.on {
+    border: 3px solid green;
+}
+.off {
+    border: 1px solid black;
+}

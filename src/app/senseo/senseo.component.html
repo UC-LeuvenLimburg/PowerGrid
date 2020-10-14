@@ -1,0 +1,6 @@
+<div [ngClass]="status?'on':'off'">
+    <button (click)="brew()">Gimme a cuppa'</button>
+    <span [hidden]="status?false:true">
+            {{remaining}}
+    </span>    
+</div>
