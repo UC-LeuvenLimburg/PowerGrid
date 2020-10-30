@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PowerService } from '../power.service';
+import { ZekeringService } from '../zekering.service';
 
 @Component({
   selector: 'dashboard',
@@ -8,7 +9,7 @@ import { PowerService } from '../power.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public power:PowerService) { }
+  constructor(public power:PowerService,public zekering:ZekeringService) { }
 
   verbruik: number = this.power.huidigVerbruik;
   

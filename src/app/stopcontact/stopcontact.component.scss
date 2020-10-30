@@ -1,13 +1,10 @@
 div {
-    box-sizing: border-box;
-    width: 250px;
+    width: 100px;
     height: 100px;
-    background-image: url("../../assets/computer.svg");
-    background-size: 40%;
+    background-image: url("../../assets/socket.jpg");
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
-    margin: 5px;
-    padding: 5px;
 }
 .on {
     border: 3px solid green;

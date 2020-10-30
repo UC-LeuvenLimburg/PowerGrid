@@ -1,3 +1,12 @@
-<computer></computer>
-<senseo></senseo>
+<circuit [naam]="'bureau'">
+
+    <computer #consumer (verbruikt)="updateVerbruik($event)" naam="MyComp"></computer>
+    <computer #consumer naam="YourComp"></computer>
+</circuit>
+<circuit [naam]="'keuken'">
+    <toestel [naam]="'oven'">
+
+        <senseo></senseo>
+    </toestel>
+</circuit>
 <dashboard></dashboard> 

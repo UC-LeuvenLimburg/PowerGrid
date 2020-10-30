@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PowerService } from '../power.service';
+import { ZekeringService } from '../zekering.service';
 
 @Component({
   selector: 'senseo',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SenseoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private power:PowerService, private zekering:ZekeringService) { }
   
   status: boolean = false;
   remaining: number = 5;
@@ -15,11 +17,14 @@ export class SenseoComponent implements OnInit {
 
   brew() {
     this.status = true;
+    this.power.huidigVerbruik += this.verbruik;
+    
     this.remaining = 5;
     let i = setInterval(() => {
       if (this.remaining == 0) {
         this.status = false
         clearInterval(i)
+        this.power.huidigVerbruik -= this.verbruik;
       } else { this.remaining-- }
     }, 1000)
   }
