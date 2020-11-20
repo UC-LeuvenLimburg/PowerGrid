@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { WebService } from '../web.service';
 
 interface Response {
   response: string
@@ -12,14 +13,14 @@ interface Response {
 })
 export class HttpcomComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private web: WebService) { }
 
   result;
   ngOnInit(): void {
   }
   test() {
     // alert("test succeeded!")
-    this.http.get("http://localhost:3000/test/?p=message")
+    this.web.ping()
       .subscribe((data: Response) => {
         this.result = data.response;
       },
