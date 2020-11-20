@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ComputerComponent } from './computer/computer.component';
@@ -12,6 +13,7 @@ import { VerbruikpuntenComponent } from './verbruikpunten/verbruikpunten.compone
 import { WattPipe } from './watt.pipe';
 import { DeltaPipe } from './delta.pipe';
 import { ToestelComponent } from './toestel/toestel.component';
+import { HttpcomComponent } from './httpcom/httpcom.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { ToestelComponent } from './toestel/toestel.component';
     VerbruikpuntenComponent,
     WattPipe,
     DeltaPipe,
-    ToestelComponent
+    ToestelComponent,
+    HttpcomComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
